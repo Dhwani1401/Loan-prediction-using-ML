@@ -63,9 +63,9 @@ def prediction():
 		model = joblib.load('Forest.pkl')
 		ans = model.predict(x_app)
 		if (ans==1):
-			print("Congratulations your eligble for this Loan")
+			print("Congratulations you're eligble for this Loan")
 		else:
-			print("We sad to inform that your request has not been accepted")
+			print("We are sad to inform that your request has not been accepted")
 		return render_template('shit.html', prediction=ans)
 	except ValueError:
 		return render_template('error.html', prediction=1)
